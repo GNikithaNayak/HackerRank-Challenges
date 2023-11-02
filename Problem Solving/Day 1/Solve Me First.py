@@ -1,4 +1,4 @@
-/*** 
+# /*** 
 # CHALLENGE:
 # Complete the function solveMeFirst to compute the sum of two integers.
 
@@ -9,7 +9,7 @@
 #   int b: the second value
 # Returns:
 #   int: the sum of a and b 
-***/
+# ***/
 
 def solveMeFirst(a,b):
   # Hint: Type return a+b below
