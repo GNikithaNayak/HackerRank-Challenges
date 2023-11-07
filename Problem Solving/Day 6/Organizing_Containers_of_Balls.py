@@ -19,6 +19,21 @@
 #   Each of the next n lines contains  space-separated integers describing row containers[i].
 # ***/
 
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'organizingContainers' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts 2D_INTEGER_ARRAY container as parameter.
+#
+
 POSSIBLE= "Possible"
 IMPOSSIBLE="Impossible"
 
@@ -39,3 +54,21 @@ def organizingContainers(container):
     print('Count By Container:',countByContainer)
     return POSSIBLE if countByContainer==countByType else IMPOSSIBLE
 
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    q = int(input().strip())
+
+    for q_itr in range(q):
+        n = int(input().strip())
+
+        container = []
+
+        for _ in range(n):
+            container.append(list(map(int, input().rstrip().split())))
+
+        result = organizingContainers(container)
+
+        fptr.write(result + '\n')
+
+    fptr.close()
